@@ -1,0 +1,51 @@
+16:25:02 cat .kani/test.log
+16:26:40 cd src
+16:26:52 ls
+16:28:15 git kani disable
+16:49:55 gcc -Wall 01_test.c
+error : status 1
+16:50:15 gcc -Wall 01_test.c
+error : status 0
+16:51:13 ls
+16:51:17 ./a.out
+16:54:34 gcc -Wall 01_test.c
+error : status 0
+16:54:38 ./a.out
+16:56:59 gcc -Wall 01_test.c
+error : status 0
+16:57:01 ./a.out
+16:57:57 gcc -Wall 01_test.c
+error : status 0
+16:57:58 ./a.out
+16:59:34 git status
+17:01:02 git add 01_test.c
+17:01:38 git commit -m"update(aaaa)"
+17:02:23 git commit -m "update 01_test(aaaa)"
+17:03:22 git log
+17:03:53 git kani enable
+17:14:22 gcc -Wall 02_test.c
+error : status 0
+17:15:27 ./a.out
+17:15:51 git add
+17:15:56 git commit
+17:18:34 git log
+17:19:59 git status
+17:21:04 git add 02_test.c
+17:22:18 git commit -m "aaaa"
+17:22:36 git log
+17:23:21 git kani disable
+17:31:42 gcc -Wall 03_test.c
+error : status 1
+17:32:18 gcc -Wall 03_test.c
+error : status 0
+17:32:25 ./a.out
+17:32:45 git add 03_test.c
+17:33:02 gitcommit -m "aaaaa"
+17:33:09 git commit -m "aaaaa"
+17:34:38 git status
+17:36:28 git add .kani
+17:36:30 git commit -m "add.kani"
+17:37:57 git add .kani
+17:38:03 git commit -m "add.kani"
+17:39:21 git status
+17:41:22 git add ../.kani
